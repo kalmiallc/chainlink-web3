@@ -1,6 +1,10 @@
-# Web3.py Chainlink library
+# Web3.py Chainlink Library
 
-This is a [web3.py](https://pypi.org/project/web3) library for interacting with Chainlink Ethereum contracts.
+The [Web3.py](https://pypi.org/project/web3) is a Python library designed to simplify the interaction with Chainlink Ethereum contracts. It provides an easy and streamlined way to retrieve real-time prices using the Chainlink price oracle. To use this library, you need an active web3.py instance, which should be passed during initialization.
+
+Once initialized, you can make use of the `get_price` function. This function essentially invokes the `latestRoundData` function on the Chainlink price feed contract. As a result, the `get_price` function returns a `Price` object containing all the data retrieved from the blockchain call.
+
+This library empowers Python developers by eliminating the need to write complex blockchain calls directly. Instead, it enables them to leverage the Chainlink price feed in a more familiar and Web2-friendly manner. Say goodbye to the complexities of direct blockchain interaction and embrace the simplicity of the Web3.py Chainlink Library.
 
 ## Table of content
 
