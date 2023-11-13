@@ -20,9 +20,9 @@ This is a [web3.py](https://pypi.org/project/web3) library for interacting with 
 
 ## Prerequisites
 
-- :gear: [Python 3.7.2+](https://www.python.org/)
-- :gear: [pip](https://pip.pypa.io/en/stable/)
-- :gear: [web3.py 6.0.0+](https://pypi.org/project/web3)
+- [Python 3.7.2+](https://www.python.org/)
+- [pip](https://pip.pypa.io/en/stable/)
+- [web3.py 6.0.0+](https://pypi.org/project/web3)
 
 ## Installation
 
@@ -56,7 +56,7 @@ print(result)
 
 #### Price Feed Addresses
 
-Included in this library are two dicts that contain the Ethereum contract addresses for specific token pairs: [MAINNET_PRICE_FEEDS](##TODO_LINK_HERE##) and [SEPOLIA_PRICE_FEEDS](##TODO_LINK_HERE##). If you cannot find your desired price feed within these dicts, please check [here](https://docs.chain.link/docs/data-feeds/price-feeds/addresses) to make sure it's supported, and if it is, please open an issue or a pull request for the missing price feed so that it can be added to the appropriate dict.
+Included in this library are two dicts that contain the Ethereum contract addresses for specific token pairs: [MAINNET_PRICE_FEEDS](https://github.com/kalmiallc/chainlink-web3/blob/master/chainlink_web3/types.py#L12) and [SEPOLIA_PRICE_FEEDS](https://github.com/kalmiallc/chainlink-web3/blob/master/chainlink_web3/types.py#L263). If you cannot find your desired price feed within these dicts, please check [here](https://docs.chain.link/docs/data-feeds/price-feeds/addresses) to make sure it's supported, and if it is, please open an issue or a pull request for the missing price feed so that it can be added to the appropriate dict.
 
 #### `get_price`
 
@@ -75,9 +75,9 @@ def get_price(
 #     answeredInRound: str
 ```
 
-`aggregator_interface_abi` can be found [here](https://github.com/ChainSafe/web3.js-plugin-chainlink/blob/master/src/aggregator_v3_interface_abi.ts).
+`aggregator_interface_abi` can be found [here](https://github.com/kalmiallc/chainlink-web3/blob/master/chainlink_web3/abis.py).
 
-The `get_price` method, accepts evm address for it's first parameter, and an optional second parameter for specifying the Chainlink Aggregator Interface ABI of the Ethereum smart contract you'd like to interact with (the parameter is defaulted to [aggregator_interface_abi](##TODO_LINK_HERE##)).
+The `get_price` method, accepts evm address for it's first parameter, and an optional second parameter for specifying the Chainlink Aggregator Interface ABI of the Ethereum smart contract you'd like to interact with (the parameter is defaulted to [aggregator_interface_abi](https://github.com/kalmiallc/chainlink-web3/blob/master/chainlink_web3/abis.py)).
 
 Under the hood, this method is calling the `latestRoundData` for the specified price feed, more information about it can be found [here](https://docs.chain.link/data-feeds/price-feeds/api-reference#latestrounddata).
 
@@ -100,7 +100,7 @@ result = chainlink.get_price(types.MAINNET_PRICE_FEEDS['LinkEth'])
 
 ## Found an issue or have a question or suggestion
 
-- :writing_hand: If you found an issue or have a question or suggestion [submit an issue]() or join us on [Discord](https://discord.gg/yjyvFRP)
+- If you found an issue or have a question or suggestion [submit an issue]() or join us on [Discord](https://discord.gg/yjyvFRP)
   ![Discord](https://img.shields.io/discord/593655374469660673.svg?label=Discord&logo=discord)
 
 ## Build & install locally
