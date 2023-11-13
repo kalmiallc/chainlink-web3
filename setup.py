@@ -9,7 +9,7 @@ long_description = read_file("README.md")
 setup(
     name='chainlink_web3',
     packages=find_packages(include=['chainlink_web3']),
-    version='0.1.2',
+    version='0.1.3',
     url="https://github.com/kalmiallc/chainlink-web3",
     description='Library for interacting with Chainlink Ethereum contracts.',
     long_description_content_type="text/markdown",
