@@ -46,12 +46,12 @@ pip3 install web3
 
 ```py
 from web3 import Web3, HTTPProvider
-from chainlink_web3.utils import ChainlinkUtils
+from chainlink_web3.utils import ChainlinkUtils, types
 
 w3 = Web3(HTTPProvider('https://rpc.ankr.com/eth', request_kwargs={'timeout': 180}))
 
 chainlink = ChainlinkUtils(w3=w3)
-result = chainlink.get_price('0x72AFAECF99C9d9C8215fF44C77B94B99C28741e8')
+result = chainlink.get_price(types.MAINNET_PRICE_FEEDS['LinkEth'])
 
 print(result)
 ```
