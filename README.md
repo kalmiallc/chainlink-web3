@@ -1,5 +1,9 @@
 # Web3.py Chainlink Library
 
+> **Note**
+>
+> _This project is provided to demonstrate how to interact with Chainlink’s systems, products, and services to integrate them into your own. This template is provided “AS IS” and “AS AVAILABLE” without warranties of any kind, it has not been audited, and it may be missing key checks or error handling to make the usage of the system, product or service more clear. Do not use the code in this example in a production environment without completing your own audits and application of best practices. Kalmia is not responsible for unintended outputs that are generated due to errors in code._
+
 The **Web3.py Chainlink Library** is a Chainlink Python library designed to simplify the interaction with Chainlink Ethereum contracts. It provides an easy and streamlined way to retrieve real-time prices using the Chainlink price oracle. The library is dependent on [Web3.py](https://pypi.org/project/web3), so you'll need to provide an active instance during initialization.
 
 Once initialized, you can make use of the `get_price` function. This function essentially invokes the `latestRoundData` function on the Chainlink price feed contract. As a result, the `get_price` function returns a `Price` object containing all the data retrieved from the blockchain call.
